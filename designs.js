@@ -13,7 +13,6 @@ function makeGrid(height, width) {
             cell.addEventListener("mousedown", function(evt) {
                 cell.style.backgroundColor = color.value;
             cell.addEventListener("contextmenu", function(evt) {
-                evt.preventDefault();
                 cell.style.backgroundColor = "white";
             } )
             } )
@@ -24,7 +23,6 @@ function makeGrid(height, width) {
 
 
 sizePicker.addEventListener("submit", function(evt) {
-    evt.preventDefault();
     while (canvas.hasChildNodes()) {
         canvas.removeChild(canvas.lastChild);
     }
