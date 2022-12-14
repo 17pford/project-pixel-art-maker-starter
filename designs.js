@@ -42,6 +42,3 @@ sizePicker.addEventListener("submit", function(evt) {
     }
     makeGrid(height.value, width.value);
 });
-
-
-});
