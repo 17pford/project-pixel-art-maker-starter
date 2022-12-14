@@ -5,7 +5,6 @@ var height = document.getElementById("inputHeight");
 var width = document.getElementById("inputWidth");
 
 
-//function to create grid and assign event listeners to all cells on creation
 function makeGrid(height, width) {
     for (let y = 0; y < height; y++) {
         let row = canvas.insertRow(y);
@@ -23,7 +22,6 @@ function makeGrid(height, width) {
 }
 
 
-//function that uses the size picker submit to call makeGrid() funtion
 sizePicker.addEventListener("submit", function(evt) {
     evt.preventDefault();
     while (canvas.hasChildNodes()) {
