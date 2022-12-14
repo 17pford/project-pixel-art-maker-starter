@@ -21,10 +21,16 @@ function makeGrid(height, width) {
 }
 
 
-
 sizePicker.addEventListener("submit", function(evt) {
     while (canvas.hasChildNodes()) {
         canvas.removeChild(canvas.lastChild);
     }
     makeGrid(height.value, width.value);
+});
+
+
+save.addEventListener("click", function(evt) {
+    html2canvas(canvas).then(canvas => {
+        document.body.appendChild(canvas)
+    });
 });
