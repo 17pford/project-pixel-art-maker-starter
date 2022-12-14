@@ -1,3 +1,5 @@
+s (28 sloc)  1 KB
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +13,9 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        <input type="number" id="inputHeight" name="height" min="1" value="20">
         Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
+        <input type="number" id="inputWidth" name="width" min="1" value="20">
         <input type="submit">
     </form>
 
@@ -22,7 +24,12 @@
 
     <h2>Design Canvas</h2>
     <table id="pixelCanvas"></table>
+        <h3>Toggle Grid: <button button type="button" id="gridToggle">On/Off</button></h3>
+
+    <h2>Click to <span class="fill">Fill</span> / Right-Click to <span class="erase">Erase</span></h2>
+    <button button type="button" id="saveArt">Save</button>
 
     <script src="designs.js"></script>
+    <script src="html2canvas.js"></script>
 </body>
 </html>
