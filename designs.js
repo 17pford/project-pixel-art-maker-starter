@@ -4,8 +4,7 @@ var color = document.getElementById("colorPicker");
 var sizePicker = document.getElementById("sizePicker");
 var height = document.getElementById("inputHeight");
 var width = document.getElementById("inputWidth");
-
-
+var toggle = document.getElementById("gridToggle");
 
 function makeGrid(height, width) {
     for (let y = 0; y < height; y++) {
@@ -22,6 +21,18 @@ function makeGrid(height, width) {
         }
     }
 }
+
+
+toggle.addEventListener("click", function() {
+    var elementsTd = document.getElementsByTagName("td");
+    var elementsTr = document.getElementsByTagName("tr");
+    for (var i=0; i<elementsTd.length; ++i) {
+        elementsTd[i].classList.toggle("off");
+    }
+    for (var j=0; j<elementsTr.length; ++j) {
+        elementsTr[j].classList.toggle("off");
+    }
+});
 
 
 sizePicker.addEventListener("submit", function(evt) {
